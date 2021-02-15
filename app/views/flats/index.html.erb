@@ -1,7 +1,5 @@
 <p id="notice"><%= notice %></p>
-
 <h1>Flats</h1>
-
 <table>
   <thead>
     <tr>
@@ -10,7 +8,6 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @flats.each do |flat| %>
       <tr>
@@ -23,7 +20,9 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Flat', new_flat_path %>
+<div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+    </div>
+  <br>
+  <%= link_to 'New Flat', new_flat_path %>
