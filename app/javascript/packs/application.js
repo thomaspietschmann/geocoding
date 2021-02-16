@@ -32,7 +32,10 @@ import "mapbox-gl/dist/mapbox-gl.css";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
-flatpickr(".datepicker", {});
+flatpickr(".datepicker", {
+  altInput: true,
+  enableTime: true,
+});
 
 document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
