@@ -1,6 +1,7 @@
-<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+<%# <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' /> %>
 <p id="notice"><%= notice %></p>
 <h1>Flats</h1>
+<%= render "datepicker_form" %>
 <table>
   <thead>
     <tr>
@@ -21,9 +22,10 @@
     <% end %>
   </tbody>
 </table>
+<button id="fetch-button">Fetch Flats</button>
 <%= link_to 'New Flat', new_flat_path %>
 <div id="map"
      style="width: 100%; height: 600px;"
      data-markers="<%= @markers.to_json %>"
-    </div>
+</div>
   <br>

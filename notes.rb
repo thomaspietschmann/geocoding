@@ -171,6 +171,15 @@ Forms
   <%= f.submit, class: "btn btn-primary" %>
 <% end %>
 
+----:search will generate search in params
+
+<%= simple_form_for :search, method: :get do |f| %>
+  <%= f.input :starts_at%>
+  <%= f.input :ends_at%>
+  <%= f.submit "Go" %>
+<% end %>
+
+
 
   https://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-form_for
 
@@ -775,3 +784,7 @@ const initMapbox = () => {
 };
 
 export { initMapbox };
+
+----searching with geocoding -----
+
+yarn add @mapbox/mapbox-gl-geocoder

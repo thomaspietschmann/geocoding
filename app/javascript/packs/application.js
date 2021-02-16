@@ -25,13 +25,19 @@ import "bootstrap";
 
 import { initMapbox } from "../plugins/init_mapbox";
 import { initAutocomplete } from "../plugins/init_autocomplete";
-
+import { initFetchFlats } from "../plugins/init_fetch_flats";
+import flatpickr from "flatpickr";
+import "flatpickr/dist/flatpickr.min.css";
+import "mapbox-gl/dist/mapbox-gl.css";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+
+flatpickr(".datepicker", {});
 
 document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
   // initSelect2();
   initMapbox();
   initAutocomplete();
+  initFetchFlats();
 });
