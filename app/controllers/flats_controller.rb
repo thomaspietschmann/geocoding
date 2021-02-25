@@ -5,7 +5,7 @@ class FlatsController < ApplicationController
       {
         lat: flat.latitude,
         lng: flat.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { flat: flat }),
+        infoWindow: render_to_string(partial: "info_window", locals: { flat: flat })
       }
     end
 
@@ -23,6 +23,10 @@ class FlatsController < ApplicationController
     @flat = Flat.new(flat_params)
     @flat.save
     redirect_to flats_path
+  end
+
+  def confirm
+    raise
   end
 
   private
